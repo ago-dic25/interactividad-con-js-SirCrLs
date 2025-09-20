@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Spot</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,11 +13,13 @@
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="">
         <nav>
             
             <button id="menu">Menu</button>
             <ul>
+		<li>
+			<img src="logo.png" alt="">
+		</li>
                 <li>
                     <a href="#">Articles</a>
                 </li>
@@ -31,10 +32,12 @@
                  <li>
                     <a href="#">Crear Cuenta / Registro</a>
                 </li>
-            </ul>
-            <button id="buscar">
+
+		<li><button id="buscar">
                 Buscar
-            </button>
+            </button></li>
+            </ul>
+            
         </nav>
     </header>
     
@@ -42,8 +45,23 @@
         <section>
             <div class="tarjeta" id="bestOfTheWeek">
                 <h1>Best of the week</h1>
-                <a href="#">See all posts</a>
+                <a href="#" id="seeAllPosts">See all posts</a>
             </div>
+		<div id="posts" class="ocultar">
+            <div class = "post">
+                ejemplo 1
+            </div>		
+            <div class = "post">
+                ejemplo 2
+            </div>	
+            <div class = "post">
+                ejemplo 3
+            </div>	
+            <div class = "post">
+                ejemplo 4
+            </div>	
+        </div>
+
             <div class="tarjeta" id="travel">
                 <span>Sep 06, 2022</span>
                 <button>Travel</button>

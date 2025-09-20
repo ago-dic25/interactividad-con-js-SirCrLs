@@ -30,12 +30,30 @@ suma(100, 200);
 
 //===Elementos de la pagina como variables===///
 var botonBuscar = document.getElementById("buscar");
+var ads = document.getElementById("ads");
+var seeAll = document.getElementById("seeAllPosts");
+var posts = document.getElementById("posts");
+
 
 console.log(botonBuscar);
 
 //==== Eventos===== //
 botonBuscar.addEventListener("click", function(){
-    //alert("Hiciste clic al boton");
+    alert("Hiciste clic al boton");
     botonBuscar.classList.add("rojo");
 });
+ads.addEventListener("click",function() {
+    ads.classList.add("rojo");
+})
+seeAll.addEventListener("click",function() {
+    if(posts.classList.contains("ocultar")){
+        posts.classList.remove("ocultar")
+        posts.classList.add("mostrar");
+    } else{
+        posts.classList.remove("mostrar")
+        posts.classList.add("ocultar")
+    }
+})
+
+
 
