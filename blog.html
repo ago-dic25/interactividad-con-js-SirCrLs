@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="estilos.css">
     <!--<script src="https://kit.fontawesome.com/6d11003e79.js" crossorigin="anonymous"></script>-->
 </head>
-<body>
+<body id="body" class="oscuro">
     <header>
         <nav>
             
@@ -36,6 +36,16 @@
 		<li><button id="buscar">
                 Buscar
             </button></li>
+                <li>
+                    <button id="btnOscuro">
+                        modo oscuro
+                    </button>
+                </li>
+            </ul>
+            <ul id ="menu2" class="ocultar">
+                <li>
+                    <input type="text" placeholder="Buscar" id="buscartxt">
+                </li>
             </ul>
             
         </nav>
@@ -75,13 +85,16 @@
         <aside>
             <div class="tarjeta" id="ads">
                 <span>ADS</span>
-                <button>+</button>
+                <button id="btnLike">+</button>
                 <span>Become a podcaster</span>
                 <h3>Real talk</h3>
             </div>
             <div  class="tarjeta" id="seeAll">
                 <img src="imagenes/soundtrap-n30_i7mx62o-unsplash.jpg" alt="" width="50%">
-                <button>See all pics</button>
+                <button id="seeAllPics">See all pics</button>
+            </div>
+            <div  class="tarjeta ocultar" id="morePics">
+                <img src="" id="imgFlip">
             </div>
         </aside>
     </main>
