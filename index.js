@@ -19,23 +19,79 @@ function imprimirMensaje(mensaje){
     console.log("Este es mi mensaje " + mensaje);
 }
 
-imprimirMensaje("Hola");
-imprimirMensaje("Vacaciones 1 semana :D");
-imprimirMensaje(true);
-
-suma(1, 2);
-suma(10, 20);
-suma(100, 200);
-
 
 //===Elementos de la pagina como variables===///
 var botonBuscar = document.getElementById("buscar");
+var ads = document.getElementById("ads");
+var seeAll = document.getElementById("seeAllPosts");
+var posts = document.getElementById("posts");
+var botonOscuro = document.getElementById("btnOscuro");
+var body = document.getElementById("body");
+var like = document.getElementById("btnLike");
+var cntLike = 0;
+var seeAllPics = document.getElementById("seeAllPics");
+var morePics = document.getElementById("morePics");
+var imgFlip = document.getElementById("imgFlip");
+var pics = ["imagenes/rachel-coyne-mTsotT-gMrY-unsplash.jpg","imagenes/jukka-aalho-OaPksPcVp50-unsplash.jpg"]
+var menu2 = document.getElementById("menu2");
 
 console.log(botonBuscar);
 
 //==== Eventos===== //
 botonBuscar.addEventListener("click", function(){
-    //alert("Hiciste clic al boton");
-    botonBuscar.classList.add("rojo");
+    if(menu2.classList.contains("ocultar")){
+        menu2.classList.remove("ocultar")
+        menu2.classList.add("mostrar");
+    } else{
+        menu2.classList.remove("mostrar")
+        menu2.classList.add("ocultar")
+    }
 });
+ads.addEventListener("click",function() {
+    ads.classList.add("rojo");
+})
+seeAll.addEventListener("click",function() {
+    if(posts.classList.contains("ocultar")){
+        posts.classList.remove("ocultar")
+        posts.classList.add("mostrar");
+    } else{
+        posts.classList.remove("mostrar")
+        posts.classList.add("ocultar")
+    }
+})
+botonOscuro.addEventListener("click", function(){
+    if(!body.classList.contains("oscuro")){
+        body.classList.add("oscuro")
+    } else {
+        body.classList.remove("oscuro");
+    }
+})
+like.addEventListener("click", function(){
+    cntLike++;
+    like.innerHTML = cntLike;
+})
+seeAllPics.addEventListener("click", function(){
+    if(morePics.classList.contains("ocultar")){
+        morePics.classList.remove("ocultar")
+        imgFlip.src = pics[0];
+    } else  {
+        morePics.classList.add("ocultar");
+    }
+
+})
+var cambioImg
+morePics.addEventListener("mouseover", function(){
+    let i = 0;
+
+    function toggle() {
+        imgFlip.src = pics[i];
+        i = (i + 1) % pics.length;
+    }
+    cambioImg = setInterval(toggle, 2000);
+})
+morePics.addEventListener("mouseout", function(){
+    clearInterval(cambioImg);
+})
+
+
 

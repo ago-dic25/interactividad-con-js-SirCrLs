@@ -1,15 +1,40 @@
 body{
      font-family: sans-serif;
-     /*background-color: hotpink;*/
      margin: 0;
 }
-ul {
-     list-style-type:none;
+.oscuro{
+    background-color: #222;
+    color: white;
 }
+.oscuro a{
+    color: white;
+}
+.oscuro #buscar{
+    color: white;
+}
+.oscuro #btnOscuro{
+    color: white;
+}
+.oscuro .tarjeta{
+    color: black;
+}
+.oscuro #bestOfTheWeek{
+    color: white;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+li {
+    justify-content: center;
+    bottom: auto;
+    font-size: 18px;
+    cursor: pointer;
 
-nav{
-     background-color: white;  
-     border-radius:20px;
 }
 
 a{
@@ -42,7 +67,15 @@ section img, aside img {
 .tarjeta {
      margin: 20px 0;
 }
+.oscuro .post {
+    background-color: #111;
+}
 
+.post{
+    padding: 20px;
+    background-color: lightgray;
+    border-radius: 30px;
+}
 
 #travel {
      position: relative;
@@ -76,8 +109,6 @@ section img, aside img {
      right: 20px;
      
 }
-
-
 
 #travel .info h2,
 #travel .info span {

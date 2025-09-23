@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Spot</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,13 +11,15 @@
     <link rel="stylesheet" href="estilos.css">
     <!--<script src="https://kit.fontawesome.com/6d11003e79.js" crossorigin="anonymous"></script>-->
 </head>
-<body>
+<body id="body" class="oscuro">
     <header>
-        <img src="logo.png" alt="">
         <nav>
             
             <button id="menu">Menu</button>
             <ul>
+		<li>
+			<img src="logo.png" alt="">
+		</li>
                 <li>
                     <a href="#">Articles</a>
                 </li>
@@ -31,10 +32,22 @@
                  <li>
                     <a href="#">Crear Cuenta / Registro</a>
                 </li>
-            </ul>
-            <button id="buscar">
+
+		<li><button id="buscar">
                 Buscar
-            </button>
+            </button></li>
+                <li>
+                    <button id="btnOscuro">
+                        modo oscuro
+                    </button>
+                </li>
+            </ul>
+            <ul id ="menu2" class="ocultar">
+                <li>
+                    <input type="text" placeholder="Buscar" id="buscartxt">
+                </li>
+            </ul>
+            
         </nav>
     </header>
     
@@ -42,8 +55,23 @@
         <section>
             <div class="tarjeta" id="bestOfTheWeek">
                 <h1>Best of the week</h1>
-                <a href="#">See all posts</a>
+                <a href="#" id="seeAllPosts">See all posts</a>
             </div>
+		<div id="posts" class="ocultar">
+            <div class = "post">
+                ejemplo 1
+            </div>		
+            <div class = "post">
+                ejemplo 2
+            </div>	
+            <div class = "post">
+                ejemplo 3
+            </div>	
+            <div class = "post">
+                ejemplo 4
+            </div>	
+        </div>
+
             <div class="tarjeta" id="travel">
                 <span>Sep 06, 2022</span>
                 <button>Travel</button>
@@ -57,13 +85,16 @@
         <aside>
             <div class="tarjeta" id="ads">
                 <span>ADS</span>
-                <button>+</button>
+                <button id="btnLike">+</button>
                 <span>Become a podcaster</span>
                 <h3>Real talk</h3>
             </div>
             <div  class="tarjeta" id="seeAll">
                 <img src="imagenes/soundtrap-n30_i7mx62o-unsplash.jpg" alt="" width="50%">
-                <button>See all pics</button>
+                <button id="seeAllPics">See all pics</button>
+            </div>
+            <div  class="tarjeta ocultar" id="morePics">
+                <img src="" id="imgFlip">
             </div>
         </aside>
     </main>
